@@ -20,7 +20,7 @@
 <?php
 	
 	if (isset($_POST['submit'])) {
-		$username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+		$age = htmlspecialchars($_POST['age'])
 		$age = filter_input(INPUT_POST, "age", FILTER_SANITIZE_NUMBER_INT);
 		$email = filter_input(INPUT_POST , "email", FILTER_SANITIZE_EMAIL);
 		echo "hello {$username} <br>";
@@ -29,4 +29,13 @@
 	}
 
 ?>
+
+
+<!-- 
+
+		use htmlspecialchars() for displaying input
+		use filter_input() forn sanitizing incoming input
+	
+
+ -->
 

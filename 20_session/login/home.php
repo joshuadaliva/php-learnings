@@ -1,5 +1,12 @@
 
-<?php session_start(); ?>
+<?php session_start();
+	
+	if($_SESSION['username'] != "joshua"){
+		session_destroy();
+		header("Location: index.php");
+	}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

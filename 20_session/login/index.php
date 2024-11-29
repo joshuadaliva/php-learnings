@@ -24,7 +24,9 @@
 		
 		
 		if (empty($_SESSION['username']) && empty($_SESSION['password'])) {
-			$_SESSION['username'] = $_POST['username'];
+			$username = filter_input(INPUT_POST, "username" , FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+			$password = filter_input(INPUT_POST, "password" , FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+			$_SESSION['username'] = $username;
 			$_SESSION['password'] = $_POST['password'];
 			echo "{$_SESSION['username']}";
 			header("Location: home.php"); 

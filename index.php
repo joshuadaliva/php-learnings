@@ -1,7 +1,19 @@
 <?php
 	
-	// session - superglobal use to store information on a user to be used across multiple pages
-	// once a session is created a user is assigned to a session id
-	// ex. login credential
+	// hashing - use to convert text to letter , numbers and symbols in mathematical form
+	// password_hash defualt uses bcrypt
+	
+	$password = "daliva321";
+
+	$hash = password_hash($password, PASSWORD_DEFAULT);
+
+	if (password_verify("daliva321", $hash)) {
+		echo "you may now enter";
+	}
+	else{
+		echo "you cannot enter";
+	}
+
+	// echo "$hash";
 
 ?>
