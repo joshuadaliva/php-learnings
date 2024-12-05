@@ -1,0 +1,10 @@
+--  it this good? when a user signup it will pick if she wants to be a borrowers or admins,
+-- now when a usertype is borrowers , it will add the informations to the borrowers table, if admin
+--  it will add to the admins table, now in admin he can see the borrowers , and then she can add loan, 
+--  in the add borrowers page it will loop all the usertype borrowers and display its information, 
+--  the borrower_id etc. to the table together with the add loan button, now when a user clicks add 
+--  loan it will show the modal which consist the  amount , start_date , due_date , status (default 
+--  since add is unpaid) and then the borrower_id is automatically gets the id of that borrower when 
+--  click the button, and then admin_id is obtain from admin that currently logs in and currently adding 
+--  loan, and then in the manage_loan page it will loop all loans made by the admin , and every loans add
+--   edit load, delete load, when click it will show modal

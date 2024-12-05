@@ -277,7 +277,6 @@
 						    close: true, // show close button
 						}).showToast();
     				}
-
     			}	
     		})
     	})
